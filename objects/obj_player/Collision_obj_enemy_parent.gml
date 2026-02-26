@@ -1,3 +1,4 @@
+// turn red, take damage, and possibly die when interacting with monster. Only every 30 frames
 if (alarm[0] < 0) 
 {
 	image_blend = c_red
