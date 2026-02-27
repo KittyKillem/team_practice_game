@@ -27,7 +27,7 @@
     "path":"texturegroups/Default",
   },
   "tileAnimationFrames":[],
-  "tileAnimationSpeed":15.0,
+  "tileAnimationSpeed":3.0,
   "tileHeight":16,
   "tilehsep":0,
   "tilevsep":0,
