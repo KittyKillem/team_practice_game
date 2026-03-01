@@ -1,10 +1,12 @@
-/*
+
 var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var _ver = keyboard_check(ord("S")) - keyboard_check(ord("W"));
+var _my_array = [2, 3]
+var _my_bool = false
 
-move_and_collide(_hor * move_speed, _ver * move_speed, tilemap_to_collide);
 
-*/
+move_and_collide(_hor, _ver, tilemap_to_collide);
+/*
 
 // interepret WASD as X and Y directions
 var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"))
@@ -36,7 +38,7 @@ if (_ver > 0 or _ver < 0)
 
 // move and collide function
 move_and_collide(_hor * move_speed,_ver * move_speed, tilemap_to_collide, undefined, undefined, undefined, move_speed, move_speed)
-
+*/
 
 // detect movement, and set animation accordingly.
 if (_hor !=0 or _ver != 0)
@@ -63,6 +65,7 @@ if keyboard_check(vk_space)
 {
 	// create an attack object at your location
 	var _inst = instance_create_depth(x, y, depth, obj_attack)
+	_inst.damage = strength
 	// have the image point in the direction of your most recent movement
 	_inst.image_angle = facing
 }

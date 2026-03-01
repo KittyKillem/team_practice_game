@@ -3,9 +3,10 @@ if (alarm[0] < 0)
 {
 	image_blend = c_red
 	hp_current -= other.damage
+	// _health_width = _bar_width * (hp_current / hp_max)
 	if (hp_current <= 0)
 	{
-		instance_destroy()
+		room_restart()
 	}
 	alarm[0] = 30
 }
