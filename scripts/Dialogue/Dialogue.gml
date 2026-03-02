@@ -16,7 +16,7 @@ char_colors =
 welcome_dialog = [
 {
 	name: "Cross",
-	msg: "Bla bla bla bla."
+	msg: "Andrew was here."
 },
 {
 	name: "Your_name_here",
