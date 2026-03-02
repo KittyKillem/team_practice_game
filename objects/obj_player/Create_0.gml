@@ -12,5 +12,4 @@ function add_xp(_xp_to_add)
 	}	
 }
 
-image_blend = c_red
 tilemap_to_collide = layer_tilemap_get_id("Tiles_Col");

@@ -4,10 +4,12 @@
   "eventList":[],
   "managed":true,
   "name":"obj_npc1",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_npc_parent","path":"objects/obj_npc_parent/obj_npc_parent.yy",},"propertyId":{"name":"dialog","path":"objects/obj_npc_parent/obj_npc_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-1",},
+  ],
   "parent":{
-    "name":"children",
-    "path":"folders/Objects/children.yy",
+    "name":"NPC's",
+    "path":"folders/Objects/NPC's.yy",
   },
   "parentObjectId":{
     "name":"obj_npc_parent",
