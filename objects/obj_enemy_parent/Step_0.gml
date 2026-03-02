@@ -1,3 +1,5 @@
+if(instance_exists(obj_dialog)) exit;
+
 // if knockback is happening, override movement target
 if (alarm[1] >= 0)
 {

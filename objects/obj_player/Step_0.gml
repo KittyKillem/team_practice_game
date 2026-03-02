@@ -1,12 +1,15 @@
+if(instance_exists(obj_dialog)) exit;
 
+
+/*
 var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var _ver = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 var _my_array = [2, 3]
 var _my_bool = false
 
-
 move_and_collide(_hor, _ver, tilemap_to_collide);
-/*
+*/
+
 
 // interepret WASD as X and Y directions
 var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"))
@@ -38,7 +41,7 @@ if (_ver > 0 or _ver < 0)
 
 // move and collide function
 move_and_collide(_hor * move_speed,_ver * move_speed, tilemap_to_collide, undefined, undefined, undefined, move_speed, move_speed)
-*/
+
 
 // detect movement, and set animation accordingly.
 if (_hor !=0 or _ver != 0)
