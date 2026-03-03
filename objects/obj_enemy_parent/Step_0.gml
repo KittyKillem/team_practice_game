@@ -1,4 +1,5 @@
 if(instance_exists(obj_dialog)) exit;
+if(instance_exists(MenuController) && MenuController.paused == true) exit;
 
 // if knockback is happening, override movement target
 if (alarm[1] >= 0)
@@ -19,4 +20,4 @@ if (_hor + _ver > 1 || _hor + _ver < -1)
 }
 
 // move and collide function
-move_and_collide(_hor, _ver, [tilemap_to_collide, obj_enemy_parent])
+move_and_collide(_hor, _ver, [tilemap_to_collide, obj_enemy_parent, obj_player])

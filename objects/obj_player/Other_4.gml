@@ -8,3 +8,5 @@ y = ystart
 
 hp_current = hp_max;
 facing = 0
+
+if (!instance_exists(MenuController)) instance_create_depth(0, 0, 0, MenuController)
