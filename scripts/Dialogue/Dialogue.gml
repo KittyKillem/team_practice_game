@@ -10,7 +10,8 @@ char_colors =
 {
 	"Congrats": c_yellow,
 	"Cross": c_yellow,
-	"Your_name_here": c_aqua
+	"Your_name_here": c_aqua,
+	"Dweebus Maximus": c_red
 }
 
 welcome_dialog = [
@@ -35,3 +36,5 @@ welcome_dialog = [
 	msg: "Can you please just play my shitty game already."
 }
 ]
+
+dialog_two = [{name: "Dweebus Maximus", msg: "Hehehe. Fuck off, kid."}]

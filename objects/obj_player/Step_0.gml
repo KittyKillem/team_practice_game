@@ -39,7 +39,10 @@ if (_ver > 0 or _ver < 0)
 	}
 }
 
-// move and collide function
+// final variable setup and move_and_collide function
+var _x_movement = _hor * move_speed * (delta_time / 10000)
+var _y_movement = _ver * move_speed * (delta_time / 10000)
+move_and_collide(_x_movement, _y_movement , tilemap_to_collide, undefined, undefined, undefined, move_speed, move_speed)
 
 if (!MenuController.paused) {
 move_and_collide(_hor * move_speed,_ver * move_speed, tilemap_to_collide, undefined, undefined, undefined, move_speed, move_speed)
@@ -65,6 +68,8 @@ else
 	else if (sprite_index == spr_player_walk_down) sprite_index = spr_player_idle_down
 }
 
+
+/*
 // attack when pressing space
 if keyboard_check(vk_space)
 {
