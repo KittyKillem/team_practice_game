@@ -40,8 +40,10 @@ if (_ver > 0 or _ver < 0)
 }
 
 // move and collide function
-move_and_collide(_hor * move_speed,_ver * move_speed, tilemap_to_collide, undefined, undefined, undefined, move_speed, move_speed)
 
+if (!MenuController.paused) {
+move_and_collide(_hor * move_speed,_ver * move_speed, tilemap_to_collide, undefined, undefined, undefined, move_speed, move_speed)
+}
 
 // detect movement, and set animation accordingly.
 if (_hor !=0 or _ver != 0)
