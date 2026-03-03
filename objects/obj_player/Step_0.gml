@@ -28,7 +28,7 @@ if (_hor > 0 or _hor < 0)
 	if (place_meeting(x + (_hor * move_speed), y, tilemap_to_collide))
 	{
 		_hor = 0
-	}
+	}	
 }
 
 if (_ver > 0 or _ver < 0)
