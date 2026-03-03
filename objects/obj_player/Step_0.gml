@@ -1,5 +1,5 @@
 if(instance_exists(obj_dialog)) exit;
-
+if(instance_exists(MenuController) && MenuController.paused == true) exit;
 
 /*
 var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
@@ -28,7 +28,7 @@ if (_hor > 0 or _hor < 0)
 	if (place_meeting(x + (_hor * move_speed), y, tilemap_to_collide))
 	{
 		_hor = 0
-	}
+	}	
 }
 
 if (_ver > 0 or _ver < 0)
@@ -42,7 +42,8 @@ if (_ver > 0 or _ver < 0)
 // final variable setup and move_and_collide function
 var _x_movement = _hor * move_speed * (delta_time / 10000)
 var _y_movement = _ver * move_speed * (delta_time / 10000)
-move_and_collide(_x_movement, _y_movement , tilemap_to_collide, undefined, undefined, undefined, move_speed, move_speed)
+move_and_collide(_x_movement, _y_movement , [tilemap_to_collide, obj_enemy_parent], undefined, undefined, undefined, move_speed, move_speed)
+
 
 
 // detect movement, and set animation accordingly.
