@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Kats Sprites",
-    "path":"folders/Sprites/Kats Sprites.yy",
+    "name":"UI Sprites",
+    "path":"folders/Sprites/UI Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -10,8 +10,8 @@
   "name":"MenuController",
   "overriddenProperties":[],
   "parent":{
-    "name":"Tab_Menu",
-    "path":"folders/Tab_Menu.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

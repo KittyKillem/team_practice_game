@@ -42,7 +42,11 @@ if (_ver > 0 or _ver < 0)
 // final variable setup and move_and_collide function
 var _x_movement = _hor * move_speed * (delta_time / 10000)
 var _y_movement = _ver * move_speed * (delta_time / 10000)
-move_and_collide(_x_movement, _y_movement , [tilemap_to_collide, obj_enemy_parent], undefined, undefined, undefined, move_speed, move_speed)
+var _total_movement = abs(_x_movement) + abs(_y_movement)
+var _random_encounter = false
+if (_total_movement) _random_encounter = (irandom(round(149 * _total_movement)) == 0);
+if (_random_encounter) image_blend = c_red
+move_and_collide(_x_movement, _y_movement , [tilemap_to_collide, obj_enemy_parent, obj_npc_parent], undefined, undefined, undefined, move_speed, move_speed)
 
 
 
@@ -66,6 +70,9 @@ else
 	else if (sprite_index == spr_player_walk_down) sprite_index = spr_player_idle_down
 }
 
+if (!place_meeting(x, y, obj_safety_net)) {
+	global.encounter_check = true	
+}
 
 /*
 // attack when pressing space

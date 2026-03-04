@@ -44,7 +44,7 @@ draw_set_valign(fa_top);
 
 
 //player_image
-draw_sprite_ext(spr_portrait_player, 0, 400, 20, 0.5, 0.5,0,c_white,1);
+draw_sprite_ext(spr_player_idle_down, 0, 470, 110, 7, 7,0,c_white,1);
 
 
 
@@ -60,7 +60,7 @@ draw_sprite_ext(spr_portrait_player, 0, 400, 20, 0.5, 0.5,0,c_white,1);
     var _bar_height = 18;
 
     // HP
-    var _health_width = _bar_width * (p.hp_current / p.hp_max);
+    var _health_width = _bar_width * (global.character_attributes.hp_current / global.character_attributes.hp_max);
 	 _bar_y += _bar_height + 8;
 	draw_sprite_stretched(spr_box, 0, _bar_x, _bar_y, _bar_width, _bar_height);
     draw_sprite_stretched_ext(spr_box, 1, _bar_x, _bar_y, _health_width, _bar_height, c_red, 0.6);
@@ -69,7 +69,7 @@ draw_sprite_ext(spr_portrait_player, 0, 400, 20, 0.5, 0.5,0,c_white,1);
 	draw_text(_bar_x + _bar_width / 2, _bar_y + _bar_height / 2, "HP");
 
     // XP
-    var _xp_width = _bar_width * (p.xp_current / p.xp_max);
+    var _xp_width = _bar_width * (global.character_attributes.xp_current / global.character_attributes.xp_max);
     _bar_y += _bar_height + 8;
     draw_sprite_stretched(spr_box, 0, _bar_x, _bar_y, _bar_width, _bar_height);
     draw_sprite_stretched_ext(spr_box, 1, _bar_x, _bar_y, _xp_width, _bar_height, make_color_rgb(43,142,255), 0.6);
@@ -83,13 +83,24 @@ draw_sprite_ext(spr_portrait_player, 0, 400, 20, 0.5, 0.5,0,c_white,1);
     var text_y = _bar_y + _bar_height + 0;
     var line_h = 18;
 
-    var xp_left = max(0, p.xp_max - p.xp_current);
-
-    draw_text(text_x, text_y + line_h * 0, "Max.HP: " + string(p.hp_max));
-	draw_text(text_x, text_y + line_h * 1, "XP: " + string(p.xp_current) + " / " + string(p.xp_max));
-    draw_text(text_x, text_y + line_h * 2, "STR: " + string(p.strength));
-    draw_text(text_x, text_y + line_h * 3, "DEX: " + string(p.dexterity));
-    draw_text(text_x, text_y + line_h * 4, "VIT: " + string(p.vitality));
+    var xp_left = max(0, global.character_attributes.xp_max - global.character_attributes.xp_current);
+	
+	draw_text_ext(text_x, text_y, 
+	"Max.HP: " + string(global.character_attributes.hp_max) +
+	"\nXP: " + string(global.character_attributes.xp_current) + " / " + string(global.character_attributes.xp_max) +
+	"\nSTR: " + string(global.character_attributes.strength) +
+	"\nDEX: " + string(global.character_attributes.dexterity) +
+	"\nVIT: " + string(global.character_attributes.vitality)
+	,25, 400)
+    
 
     
 }
+
+/*
+
+draw_text(text_x, text_y + line_h * 0, "Max.HP: " + string(global.character_attributes.hp_max));
+	draw_text(text_x, text_y + line_h * 1, "XP: " + string(global.character_attributes.xp_current) + " / " + string(global.character_attributes.xp_max));
+    draw_text(text_x, text_y + line_h * 2, "STR: " + string(global.character_attributes.strength));
+    draw_text(text_x, text_y + line_h * 3, "DEX: " + string(global.character_attributes.dexterity));
+    draw_text(text_x, text_y + line_h * 4, "VIT: " + string(global.character_attributes.vitality));

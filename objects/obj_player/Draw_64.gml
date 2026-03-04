@@ -13,11 +13,11 @@ if(instance_exists(MenuController) && MenuController.paused == true) exit;
 
 // Healthbar
 draw_sprite_stretched(spr_box, 0, _bar_x, _bar_y, _bar_width, _bar_height)
-var _health_width = _bar_width * (hp_current / hp_max)
+var _health_width = _bar_width * (global.character_attributes.hp_current / global.character_attributes.hp_max)
 draw_sprite_stretched_ext(spr_box, 1, _bar_x, _bar_y, _health_width, _bar_height, c_red, 0.6)
 draw_text(_bar_x + _bar_width / 2, _bar_y + _bar_height / 2, "HP")
 // XP bar
-var _xp_width = _bar_width * (xp_current / xp_max)
+var _xp_width = _bar_width * (global.character_attributes.xp_current / global.character_attributes.xp_max)
 _bar_y += _bar_height + 8
 draw_sprite_stretched(spr_box, 0, _bar_x, _bar_y, _bar_width, _bar_height)
 draw_sprite_stretched_ext(spr_box, 1, _bar_x, _bar_y, _xp_width, _bar_height, #2b8eff, 0.6)

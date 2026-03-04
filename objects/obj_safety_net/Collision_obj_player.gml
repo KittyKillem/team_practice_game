@@ -1,0 +1,1 @@
+global.encounter_check = false
