@@ -9,7 +9,7 @@
   ],
   "parent":{
     "name":"BattleButtons",
-    "path":"folders/Objects/Buttons/BattleButtons.yy",
+    "path":"folders/Objects/Battle/BattleButtons.yy",
   },
   "parentObjectId":{
     "name":"obj_battle_button_parent",

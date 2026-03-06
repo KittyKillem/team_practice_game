@@ -1,8 +1,11 @@
-move_speed = 1;
+move_speed = 60;
 facing = 0
+encounter_chance = 1299
+encounter_check = false
+
 alarm[1] = 300
 
-instance_create_layer(x, y, "Tiles_Col", obj_safety_net)
+// instance_create_layer(x, y, "Tiles_Col", obj_safety_net)
 global.encounter_check = true
 
 global.character_attributes = 
@@ -27,7 +30,7 @@ function add_xp(_xp_to_add)
 		character_attributes.vitality += 1
 		character_attributes.agility += 1
 		hp_current = hp_max
-	}	
+	} 
 }
 
 tilemap_to_collide = layer_tilemap_get_id("Tiles_Col");

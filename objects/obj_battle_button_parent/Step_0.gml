@@ -19,4 +19,5 @@ if (keyboard_check_released(vk_space) && button_selected && animate_button)
 	y -= 1
 	x -= 0.5
 	animate_button = false
+	button_function()
 }

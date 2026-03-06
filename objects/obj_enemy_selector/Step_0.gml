@@ -25,14 +25,15 @@ if (keyboard_check_pressed(ord("W")) || keyboard_check_pressed(ord("S")))
 
 if (keyboard_check_pressed(vk_escape) or keyboard_check_pressed(vk_tab)) 
 {
-	obj_battle_manager.ally_turn = true
-	instance_destroy();
+	
+		obj_battle_manager.ally_turn = true
+		instance_destroy();
 }
 
 if (keyboard_check_pressed(vk_space))
 {
-	
-	obj_battle_player.attack_enemy(global.target_enemy)	
+	obj_battle_player.attack_enemy(global.target_enemy)
+	instance_destroy()
 }
 
 depth = -9999999

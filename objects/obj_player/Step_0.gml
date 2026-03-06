@@ -22,10 +22,12 @@ if (_hor + _ver > 1 || _hor + _ver < -1)
 	clamp(_ver,-0.5, 0.5); 
 }
 
+
+
 // prevent character from colliding directly with wall
 if (_hor > 0 or _hor < 0)
 {
-	if (place_meeting(x + (_hor * move_speed), y, tilemap_to_collide))
+	if (place_meeting(x + (_hor), y, [tilemap_to_collide, obj_enemy_parent]))
 	{
 		_hor = 0
 	}	
@@ -33,22 +35,14 @@ if (_hor > 0 or _hor < 0)
 
 if (_ver > 0 or _ver < 0)
 {
-	if (place_meeting(x, y + (_ver * move_speed), tilemap_to_collide))
+	if (place_meeting(x, y + (_ver), [tilemap_to_collide, obj_enemy_parent]))
 	{
 		_ver = 0
 	}
 }
 
-// final variable setup and move_and_collide function
-var _x_movement = _hor * move_speed * (delta_time / 10000)
-var _y_movement = _ver * move_speed * (delta_time / 10000)
-var _total_movement = abs(_x_movement) + abs(_y_movement)
-var _random_encounter = false
-if (_total_movement) _random_encounter = (irandom(round(149 * _total_movement)) == 0);
-if (_random_encounter) image_blend = c_red
-move_and_collide(_x_movement, _y_movement , [tilemap_to_collide, obj_enemy_parent, obj_npc_parent], undefined, undefined, undefined, move_speed, move_speed)
-
-
+// Move and Collide Function
+move_and_collide(_hor, _ver , [tilemap_to_collide, obj_npc_parent], undefined, undefined, undefined, move_speed, move_speed)
 
 // detect movement, and set animation accordingly.
 if (_hor !=0 or _ver != 0)
@@ -70,6 +64,29 @@ else
 	else if (sprite_index == spr_player_walk_down) sprite_index = spr_player_idle_down
 }
 
+// Random Encounter Logic
+
+var _total_movement = abs(_hor) + abs(_ver)
+var _random_encounter = false
+if (_total_movement && encounter_check)
+{
+	_random_encounter = (irandom(round(encounter_chance * _total_movement)) <= 0)
+	encounter_chance -= 2
+}
+if (_random_encounter) instance_create_depth(0, 0, 0, obj_battle_switcher)
+
+// Safety Net Logic
+
+if (instance_exists(obj_safety_net) && place_meeting(x, y, obj_safety_net))
+{
+	encounter_check = false
+	alarm[2]++
+} else if (alarm[2] = -1) {
+	encounter_check = true
+	if (instance_exists(obj_safety_net)) instance_destroy(obj_safety_net)
+	
+}
+/*
 if (!place_meeting(x, y, obj_safety_net)) {
 	global.encounter_check = true	
 }

@@ -20,5 +20,6 @@ end_attack = false
 
 function attack_enemy(_target)
 {
+	
 	begin_attack = true
 }

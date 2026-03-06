@@ -2,7 +2,7 @@
   "$GMObject":"",
   "%Name":"obj_button_attack",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_button_attack",
@@ -12,7 +12,7 @@
   ],
   "parent":{
     "name":"BattleButtons",
-    "path":"folders/Objects/Buttons/BattleButtons.yy",
+    "path":"folders/Objects/Battle/BattleButtons.yy",
   },
   "parentObjectId":{
     "name":"obj_battle_button_parent",
