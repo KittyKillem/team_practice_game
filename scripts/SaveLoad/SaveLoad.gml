@@ -8,3 +8,17 @@
 function load_game(){
 	
 }
+
+global.character_attributes = 
+{
+	hp_max: 1, 
+	hp_current: 30,
+	xp_max: 30, 
+	xp_current: 0,
+	strength: 10,
+	vitality: 200, 
+	agility: 10,
+	dexterity: 10
+}
+global.character_attributes.hp_max = 10 + (2 * global.character_attributes.vitality)
+global.character_attributes.hp_current = global.character_attributes.hp_max

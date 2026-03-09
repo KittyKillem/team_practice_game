@@ -18,7 +18,7 @@ var _ver = keyboard_check(ord("S")) - keyboard_check(ord("W"))
 // restrict movement when moving diagonally
 if (_hor + _ver > 1 || _hor + _ver < -1)
 {
-	clamp(_hor,-0.5, 0.5);
+	clamp(_hor,-0.5, 0.5); 
 	clamp(_ver,-0.5, 0.5); 
 }
 
@@ -71,7 +71,7 @@ var _random_encounter = false
 if (_total_movement && encounter_check)
 {
 	_random_encounter = (irandom(round(encounter_chance * _total_movement)) <= 0)
-	encounter_chance -= 2
+	encounter_chance -= 99
 }
 if (_random_encounter) instance_create_depth(0, 0, 0, obj_battle_switcher)
 

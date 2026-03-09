@@ -1,6 +1,8 @@
 x = global.target_enemy.x
 y = global.target_enemy.y
 
+global.ally_busy = true
+
 if (image_xscale < starting_xscale + 0.3 && grow == true)
 {
 	image_xscale += 0.01

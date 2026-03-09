@@ -2,6 +2,8 @@ global.buttons_struct = {attack: true, special: false, defend: false, flee: fals
 global.button_current = "attack"
 global.button_next = ""
 
+global.target_enemy = 0
+
 var _target_button_string = ""
 var _target_button_obj = obj_button_attack
 

@@ -1,8 +1,4 @@
-attributes = {}
-if (instance_exists(obj_player))
-{
-	attributes = global.character_attributes
-}
+attributes = global.character_attributes
 
 room_current = room
 room_to_return = rm_test1
