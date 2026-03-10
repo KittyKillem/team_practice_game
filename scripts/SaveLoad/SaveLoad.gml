@@ -16,7 +16,7 @@ global.character_attributes =
 	xp_max: 30, 
 	xp_current: 0,
 	strength: 10,
-	vitality: 200, 
+	vitality: 10, 
 	agility: 10,
 	dexterity: 10
 }

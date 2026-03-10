@@ -2,7 +2,7 @@ ally_turn = false
 enemy_turn = false
 current_turn = 0
 global.enemy_busy = false
-_timer = 30
+_timer = 20
 
 turn_order = []
 global.rolls_array = []

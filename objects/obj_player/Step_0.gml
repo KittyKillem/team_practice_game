@@ -44,20 +44,40 @@ if (_ver > 0 or _ver < 0)
 // Move and Collide Function
 move_and_collide(_hor, _ver , [tilemap_to_collide, obj_npc_parent], undefined, undefined, undefined, move_speed, move_speed)
 
-// detect movement, and set animation accordingly.
+// While Moving,
 if (_hor !=0 or _ver != 0)
 {
-	if (_ver > 0) sprite_index = spr_player_walk_down;
-	else if (_ver < 0) sprite_index = spr_player_walk_up;
-	else if (_hor < 0) sprite_index = spr_player_walk_left;
-	else if (_hor > 0) sprite_index = spr_player_walk_right;
-	// store the direction moved in as a vector
+	// Set animation direction based on first movement
+	if (still or keyboard_check_released(ord(_key))) {
+		if (_ver > 0) { 
+			sprite_index = spr_player_walk_down
+			_key = "S"
+		}
+		else if (_ver < 0) {
+			sprite_index = spr_player_walk_up
+			_key = "W"
+		}
+		else if (_hor < 0) {
+			sprite_index = spr_player_walk_left
+			_key = "A"
+		}
+		else if (_hor > 0) {
+			sprite_index = spr_player_walk_right
+			_key = "D"
+		}
+		still = false
+	}
+	// Store the direction moved in as a vector
 	facing = point_direction(0, 0, _hor, _ver)
+	
 } 
 
-// while not moving, change animation to appropriate idle animation
+// While not moving,
 else
 {
+	// Reset movement animation variable setup
+	still = true
+	// Change animation to appropriate idle animation
 	if (sprite_index == spr_player_walk_left) sprite_index = spr_player_idle_left
 	else if (sprite_index == spr_player_walk_right) sprite_index = spr_player_idle_right	
 	else if (sprite_index == spr_player_walk_up) sprite_index = spr_player_idle_up

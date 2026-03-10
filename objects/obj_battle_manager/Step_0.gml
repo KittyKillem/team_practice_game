@@ -24,6 +24,6 @@ if (enemy_turn && !global.enemy_busy)
 	if(_timer <= 0) {
 		turn_order[current_turn].attack_player()
 		global.enemy_busy = true
-		_timer = 30
+		_timer = 20
 	}
 }

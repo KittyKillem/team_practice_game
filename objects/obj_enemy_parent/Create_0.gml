@@ -1,12 +1,12 @@
 
 // Setup Initial Stats
 enemy_attributes = {
-	hp_max: 20,
+	hp_max: 10,
 	hp_current: 1,
-	strength: 7,
+	strength: 5,
 	vitality: 5,
-	agility: 10,
-	dexterity: 10
+	agility: 5,
+	dexterity: 5
 }
 // Setup HP Stats
 enemy_attributes.hp_max = 10 + (2 * enemy_attributes.vitality)
@@ -44,7 +44,7 @@ function randomize_target_player()
 	{
 		target_player = instance_find(obj_battle_ally_parent, irandom(instance_number(obj_battle_ally_parent)))
 	} else {
-		target_player = obj_battle_ally_parent	
+		target_player = obj_battle_player
 	}
 }
 

@@ -29,6 +29,7 @@ if (keyboard_check_pressed(vk_escape) or keyboard_check_pressed(vk_tab))
 {
 	
 		obj_battle_manager.ally_turn = true
+		global.ally_busy = false
 		instance_destroy();
 }
 

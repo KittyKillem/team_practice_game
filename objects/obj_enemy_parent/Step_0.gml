@@ -37,15 +37,28 @@ else if (damage_animation_ending)
 		global.ally_busy = false
 		global.enemy_busy = false
 		if (enemy_attributes.hp_current <= 0) {
-			if(obj_battle_manager.turn_order[obj_battle_manager.current_turn] == id){
-				array_delete(obj_battle_manager.turn_order, array_get_index(obj_battle_manager.turn_order, id), 1)
-				obj_battle_manager.next_turn()
-			} else {
-				var _was_referencing = obj_battle_manager.turn_order[obj_battle_manager.current_turn]
-				array_delete(obj_battle_manager.turn_order, array_get_index(obj_battle_manager.turn_order, id), 1)
-				if (obj_battle_manager.turn_order[obj_battle_manager.current_turn] != _was_referencing) obj_battle_manager.current_turn--
+			var _was_referencing = obj_battle_manager.turn_order[obj_battle_manager.current_turn]
+			
+			if (obj_battle_manager.current_turn <= array_length(obj_battle_manager.turn_order) - 2) {
+				
+				var _was_next = obj_battle_manager.turn_order[obj_battle_manager.current_turn + 1]
 				
 			}
+			else var _was_next = obj_battle_manager.turn_order[0]
+			
+			
+			
+			array_delete( obj_battle_manager.turn_order, array_get_index( obj_battle_manager.turn_order, id ), 1 )
+			
+			if ( array_length( obj_battle_manager.turn_order ) == 1 ) instance_destroy()
+			
+			if ( _was_referencing == id ) {
+				obj_battle_manager.current_turn = array_get_index(obj_battle_manager.turn_order, _was_next)	
+			} else {
+				obj_battle_manager.current_turn = array_get_index(obj_battle_manager.turn_order, _was_referencing)
+			}
+	 
+			
 			instance_destroy();
 		}
 		if (!instance_exists(obj_enemy_parent)) obj_battle_switcher.room_return()
@@ -67,8 +80,8 @@ if(begin_attack && x > xstart - lunge_distance)
 		
 		var _x = target_player.x + 15 
 		var _y = target_player.y 
-		
-		var _damage_display = instance_create_layer(_x, _y, "Instances", obj_damage_number)
+
+		var _damage_display = instance_create_layer(_x, _y, "Instances", obj_damage_number, {belongs_to: target_player.id})
 		_damage_display.damage_display = floor(damage_dealt)
 		end_attack = true
 	}

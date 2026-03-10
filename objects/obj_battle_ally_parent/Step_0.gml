@@ -11,7 +11,7 @@ if(begin_attack && x < xstart + lunge_distance)
 		var _x = global.target_enemy.x - 15 
 		var _y = global.target_enemy.y - 10
 		
-		var _damage_display = instance_create_layer(_x, _y, "Instances", obj_damage_number)
+		var _damage_display = instance_create_layer(_x, _y, "Instances", obj_damage_number, {belongs_to: global.target_enemy.id})
 		_damage_display.damage_display = floor(damage_dealt)
 		end_attack = true
 	}
