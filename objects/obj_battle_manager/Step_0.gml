@@ -7,6 +7,7 @@ else enemy_turn = false
 
 if (ally_turn && !instance_exists(obj_enemy_selector) && !global.ally_busy && !global.enemy_busy)
 {
+	 
 	if (keyboard_check_pressed(ord("D")) || keyboard_check_pressed(ord("A")))
 	{
 		select_next_hor()

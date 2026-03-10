@@ -72,10 +72,14 @@ if(begin_attack && x > xstart - lunge_distance)
 	x -= 1
 	if (x <= xstart - lunge_distance)
 	{
+		// Damage Variable Setup
 		begin_attack = false
 		damage_dealt = random_range(0.7, 1.4) * enemy_attributes.strength
 		randomize_target_player()
 		
+		if (target_player.defending) damage_dealt = damage_dealt / 2
+		
+		//Call Take Damage Function
 		target_player.take_damage(damage_dealt)
 		
 		var _x = target_player.x + 15 

@@ -13,6 +13,7 @@ var _initiative_roll = 0
 function next_turn() {
 	if (current_turn <= array_length(turn_order) - 2) current_turn++
 	else current_turn = 0
+	if (object_is_ancestor(turn_order[current_turn].object_index, obj_battle_ally_parent)) turn_order[current_turn].defending = false
 }
 
 with (obj_battle_ally_parent) {

@@ -6,6 +6,8 @@ lunge_distance = 20
 begin_attack = false
 end_attack = false
 
+defending = false
+
 global.ally_busy = false
 
 function attack_enemy(_target)
