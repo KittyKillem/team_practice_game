@@ -1,0 +1,3 @@
+PLACEHOLDER DOC
+
+This is where the wav files will be and this text doc will have a list of all the songs in the folder and looping details for each song to which it is applicable.
