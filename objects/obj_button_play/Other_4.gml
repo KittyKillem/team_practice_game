@@ -1,4 +1,4 @@
-window_set_size(470, 680)
-surface_resize(application_surface, 470, 680)
+window_set_size(1366, 768)
+surface_resize(application_surface, 1366, 768)
 
-global.character_attributes.hp_current = global.character_attributes.hp_max
+audio_group_load(music_group)

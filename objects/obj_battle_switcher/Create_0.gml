@@ -1,4 +1,6 @@
 attributes = global.character_attributes
+attributes_two = global.character_two_attributes
+attributes_three = global.character_three_attributes
 
 room_current = room
 room_to_return = rm_test1

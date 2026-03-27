@@ -10,8 +10,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_battle_button_parent","path":"objects/obj_battle_button_parent/obj_battle_button_parent.yy",},"propertyId":{"name":"button_text","path":"objects/obj_battle_button_parent/obj_battle_button_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"defend",},
   ],
   "parent":{
-    "name":"BattleButtons",
-    "path":"folders/Objects/Battle/BattleButtons.yy",
+    "name":"Main Battle Buttons",
+    "path":"folders/Objects/Buttons/Battle Buttons/Main Battle Buttons.yy",
   },
   "parentObjectId":{
     "name":"obj_battle_button_parent",

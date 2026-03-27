@@ -4,8 +4,7 @@ if(instance_exists(MenuController) && MenuController.paused == true) exit;
 /*
 var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var _ver = keyboard_check(ord("S")) - keyboard_check(ord("W"));
-var _my_array = [2, 3]
-var _my_bool = false
+
 
 move_and_collide(_hor, _ver, tilemap_to_collide);
 */
@@ -27,7 +26,7 @@ if (_hor + _ver > 1 || _hor + _ver < -1)
 // prevent character from colliding directly with wall
 if (_hor > 0 or _hor < 0)
 {
-	if (place_meeting(x + (_hor), y, [tilemap_to_collide, obj_enemy_parent]))
+	if (place_meeting(x + (_hor), y, [tilemap_to_collide, obj_npc_parent]))
 	{
 		_hor = 0
 	}	
@@ -50,19 +49,19 @@ if (_hor !=0 or _ver != 0)
 	// Set animation direction based on first movement
 	if (still or keyboard_check_released(ord(_key))) {
 		if (_ver > 0) { 
-			sprite_index = spr_player_walk_down
+			sprite_index = spr_lyran_walk_down
 			_key = "S"
 		}
 		else if (_ver < 0) {
-			sprite_index = spr_player_walk_up
+			sprite_index = spr_lyran_walk_up
 			_key = "W"
 		}
 		else if (_hor < 0) {
-			sprite_index = spr_player_walk_left
+			sprite_index = spr_Lyran_Walk_Left
 			_key = "A"
 		}
 		else if (_hor > 0) {
-			sprite_index = spr_player_walk_right
+			sprite_index = spr_Lyran_Walk_Right
 			_key = "D"
 		}
 		still = false
@@ -78,20 +77,20 @@ else
 	// Reset movement animation variable setup
 	still = true
 	// Change animation to appropriate idle animation
-	if (sprite_index == spr_player_walk_left) sprite_index = spr_player_idle_left
-	else if (sprite_index == spr_player_walk_right) sprite_index = spr_player_idle_right	
-	else if (sprite_index == spr_player_walk_up) sprite_index = spr_player_idle_up
-	else if (sprite_index == spr_player_walk_down) sprite_index = spr_player_idle_down
+	if (sprite_index == spr_Lyran_Walk_Left) sprite_index = spr_lyran_idle_left
+	else if (sprite_index == spr_Lyran_Walk_Right) sprite_index = spr_lyran_idle_right	
+	else if (sprite_index == spr_lyran_walk_up) sprite_index = spr_lyran_idle_up
+	else if (sprite_index == spr_lyran_walk_down) sprite_index = spr_lyran_idle_down
 }
 
 // Random Encounter Logic
 
 var _total_movement = abs(_hor) + abs(_ver)
 var _random_encounter = false
-if (_total_movement && encounter_check)
+if (_total_movement && encounter_check && room != rm_test1)
 {
 	_random_encounter = (irandom(round(encounter_chance * _total_movement)) <= 0)
-	encounter_chance -= 99
+	encounter_chance -= 1
 }
 if (_random_encounter) instance_create_depth(0, 0, 0, obj_battle_switcher)
 

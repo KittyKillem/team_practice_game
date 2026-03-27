@@ -1,2 +1,2 @@
-draw_shadow(1)
+draw_shadow(3)
 draw_self()

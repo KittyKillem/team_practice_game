@@ -9,32 +9,33 @@ function create_dialog(_messages){
 char_colors = 
 {
 	"Congrats": c_yellow,
-	"Cross": c_yellow,
-	"Your_name_here": c_aqua,
-	"Dweebus Maximus": c_red
+	"Renatus": c_yellow,
+	"Lyran": c_aqua,
+	"Healer": c_lime,
+	"Campfire": c_orange
 }
 
 welcome_dialog = [
 {
-	name: "Cross",
-	msg: "Andrew was here."
+	name: "Renatus",
+	msg: "Alright, Lyran. The dungeon is up ahead, we'll follow you inside."
 },
 {
-	name: "Your_name_here",
-	msg: "Mhm."
+	name: "Lyran",
+	msg: "Sounds good to me, boss."
 },
 {
-	name: "Cross",
-	msg: "My name's cross btw. This is test dialogue"
-},
-{
-	name: "Your_name_here",
-	msg: "Okay..."
-},
-{
-	name: "Cross",
-	msg: "Can you please just play my shitty game already."
+	name: "Renatus",
+	msg: "By the way, you can hold TAB to make dialog go by faster."
 }
 ]
 
-dialog_two = [{name: "Dweebus Maximus", msg: "Hehehe. Fuck off, kid."}]
+dialog_two = [{name: "Healer", msg: "Imagine if the devs could remember my name..."}]
+
+campfire_dialog = [
+{
+	name: "Campfire",
+	msg: "Health restored and game saved!"
+}
+
+]

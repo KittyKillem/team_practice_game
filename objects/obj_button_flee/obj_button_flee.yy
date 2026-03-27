@@ -3,15 +3,16 @@
   "%Name":"obj_button_flee",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_button_flee",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_battle_button_parent","path":"objects/obj_battle_button_parent/obj_battle_button_parent.yy",},"propertyId":{"name":"button_text","path":"objects/obj_battle_button_parent/obj_battle_button_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"flee",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_battle_button_parent","path":"objects/obj_battle_button_parent/obj_battle_button_parent.yy",},"propertyId":{"name":"button_text","path":"objects/obj_battle_button_parent/obj_battle_button_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"",},
   ],
   "parent":{
-    "name":"BattleButtons",
-    "path":"folders/Objects/Battle/BattleButtons.yy",
+    "name":"Main Battle Buttons",
+    "path":"folders/Objects/Buttons/Battle Buttons/Main Battle Buttons.yy",
   },
   "parentObjectId":{
     "name":"obj_battle_button_parent",
@@ -35,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_button_battle",
-    "path":"sprites/spr_button_battle/spr_button_battle.yy",
+    "name":"spr_button_flee",
+    "path":"sprites/spr_button_flee/spr_button_flee.yy",
   },
   "spriteMaskId":null,
   "visible":true,

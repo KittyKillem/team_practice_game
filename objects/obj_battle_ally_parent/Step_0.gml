@@ -1,29 +1,23 @@
-if(begin_attack && x < xstart + lunge_distance)
+if(variable_instance_exists(id, "begin_turn") &&  begin_turn && x < xstart + lunge_distance)
 {
-	x += 1 * (delta_time / 10000)
-	if (x >= xstart + lunge_distance)
-	{
-		begin_attack = false
-		damage_dealt = random_range(0.7, 1.4) * character_attributes.strength
-		
-		global.target_enemy.take_damage(damage_dealt)
-		
-		var _x = global.target_enemy.x - 15 
-		var _y = global.target_enemy.y - 10
-		
-		var _damage_display = instance_create_layer(_x, _y, "Instances", obj_damage_number, {belongs_to: global.target_enemy.id})
-		_damage_display.damage_display = floor(damage_dealt)
-		end_attack = true
+	delay_timer--
+	if (delay_timer <= 0){
+		x++
+		if (x >= xstart + lunge_distance)
+		{
+			begin_turn = false
+			delay_timer = 20
+		}
 	}
 } 
-else if (end_attack = true)
+else if (end_turn = true)
 {
 	x -= 1 
 	if (x <= xstart)
 	{
 		global.ally_busy = false
 		global.enemy_busy = false
-		end_attack = false 
+		end_turn = false 
 		obj_battle_manager.next_turn()
 	}
 }
@@ -64,7 +58,33 @@ else if (damage_animation_ending)
 		damage_animation_ending = false
 		character_attributes.hp_current -= damage_taken
 		timer_two = 10
-		if (character_attributes.hp_current <= 0) game_restart();
+		if (character_attributes.hp_current <= 0 and object_index == obj_battle_player) {
+			game_restart()
+		} else if (character_attributes.hp_current <= 0)  {
+			var _was_referencing = obj_battle_manager.turn_order[obj_battle_manager.current_turn]
+			
+			if (obj_battle_manager.current_turn <= array_length(obj_battle_manager.turn_order) - 2) {
+				
+				var _was_next = obj_battle_manager.turn_order[obj_battle_manager.current_turn + 1]
+				
+			}
+			else var _was_next = obj_battle_manager.turn_order[0]
+			
+			
+			
+			array_delete( obj_battle_manager.turn_order, array_get_index( obj_battle_manager.turn_order, id ), 1 )
+			
+			if ( array_length( obj_battle_manager.turn_order ) == 1 ) instance_destroy()
+			
+			if ( _was_referencing == id ) {
+				obj_battle_manager.current_turn = array_get_index(obj_battle_manager.turn_order, _was_next)	
+			} else {
+				obj_battle_manager.current_turn = array_get_index(obj_battle_manager.turn_order, _was_referencing)
+			}
+	 
+			
+			instance_destroy();
+		}
 		global.ally_busy = false
 		image_blend = c_white
 	}

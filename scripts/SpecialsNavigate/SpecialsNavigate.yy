@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"SpecialsNavigate",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SpecialsNavigate",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

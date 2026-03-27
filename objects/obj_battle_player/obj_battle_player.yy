@@ -4,10 +4,13 @@
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":5,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_battle_player",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_battle_ally_parent","path":"objects/obj_battle_ally_parent/obj_battle_ally_parent.yy",},"propertyId":{"name":"highlight_color","path":"objects/obj_battle_ally_parent/obj_battle_ally_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FFFF00FF",},
+  ],
   "parent":{
     "name":"Battle",
     "path":"folders/Objects/Battle.yy",
@@ -34,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player_idle_right",
-    "path":"sprites/spr_player_idle_right/spr_player_idle_right.yy",
+    "name":"spr_lyran_idle_right",
+    "path":"sprites/spr_lyran_idle_right/spr_lyran_idle_right.yy",
   },
   "spriteMaskId":null,
   "visible":true,

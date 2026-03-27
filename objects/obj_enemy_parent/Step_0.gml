@@ -36,6 +36,7 @@ else if (damage_animation_ending)
 		timer_two = 10
 		global.ally_busy = false
 		global.enemy_busy = false
+		// Enemy Death Logic
 		if (enemy_attributes.hp_current <= 0) {
 			var _was_referencing = obj_battle_manager.turn_order[obj_battle_manager.current_turn]
 			
@@ -50,13 +51,18 @@ else if (damage_animation_ending)
 			
 			array_delete( obj_battle_manager.turn_order, array_get_index( obj_battle_manager.turn_order, id ), 1 )
 			
-			if ( array_length( obj_battle_manager.turn_order ) == 1 ) instance_destroy()
+			if (_was_referencing == id) instance_destroy()
 			
+			if (obj_battle_manager.current_turn >= array_length(obj_battle_manager.turn_order) || _was_referencing != obj_battle_manager.turn_order[obj_battle_manager.current_turn]) {
+				obj_battle_manager.current_turn--	
+			}
+			
+			/*
 			if ( _was_referencing == id ) {
 				obj_battle_manager.current_turn = array_get_index(obj_battle_manager.turn_order, _was_next)	
 			} else {
 				obj_battle_manager.current_turn = array_get_index(obj_battle_manager.turn_order, _was_referencing)
-			}
+			} */
 	 
 			
 			instance_destroy();
@@ -74,10 +80,10 @@ if(begin_attack && x > xstart - lunge_distance)
 	{
 		// Damage Variable Setup
 		begin_attack = false
-		damage_dealt = random_range(0.7, 1.4) * enemy_attributes.strength
+		damage_dealt = ceil(random_range(0.7, 1.4) * enemy_attributes.strength)
 		randomize_target_player()
 		
-		if (target_player.defending) damage_dealt = damage_dealt / 2
+		if (target_player.defending) damage_dealt = ceil(damage_dealt / 2)
 		
 		//Call Take Damage Function
 		target_player.take_damage(damage_dealt)

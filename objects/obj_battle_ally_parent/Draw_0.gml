@@ -1,5 +1,9 @@
+if (instance_exists(obj_battle_manager) && obj_battle_manager.turn_order[obj_battle_manager.current_turn] == id){
+	draw_shadow(2, 0.4, highlight_color)
+} else {
+	draw_shadow(2)
+}
 draw_self()
-draw_shadow(1)
 
 // HP Bar Color Variable Setup
 var _hp_color = c_lime
