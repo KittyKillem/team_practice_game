@@ -128,6 +128,7 @@
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"rm_test1","path":"rooms/rm_test1/rm_test1.yy",},},
     {"id":{"name":"rm_test2","path":"rooms/rm_test2/rm_test2.yy",},},
+    {"id":{"name":"rm_test3","path":"rooms/rm_test3/rm_test3.yy",},},
     {"id":{"name":"Battle","path":"scripts/Battle/Battle.yy",},},
     {"id":{"name":"Dialogue","path":"scripts/Dialogue/Dialogue.yy",},},
     {"id":{"name":"Drawing","path":"scripts/Drawing/Drawing.yy",},},
@@ -191,6 +192,7 @@
     {"roomId":{"name":"rm_test2","path":"rooms/rm_test2/rm_test2.yy",},},
     {"roomId":{"name":"rm_test1","path":"rooms/rm_test1/rm_test1.yy",},},
     {"roomId":{"name":"rm_battle","path":"rooms/rm_battle/rm_battle.yy",},},
+    {"roomId":{"name":"rm_test3","path":"rooms/rm_test3/rm_test3.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

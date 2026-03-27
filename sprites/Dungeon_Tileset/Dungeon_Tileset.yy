@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"Dungeon_Tileset",
   "bboxMode":0,
-  "bbox_bottom":174,
+  "bbox_bottom":166,
   "bbox_left":22,
   "bbox_right":133,
   "bbox_top":32,

@@ -1,7 +1,7 @@
 if (variable_global_exists("music")) {
 	audio_resume_sound(global.music)	
 } else {
- global.music = audio_play_sound(snd_forest_theme, 0, true)
+ global.music = audio_play_sound(snd_village_theme, 0, true)
 }
 window_set_size(1366, 768)
 surface_resize(application_surface, 1366, 768)
@@ -20,6 +20,12 @@ if (global.x_goto != 0) {
 	
 	global.x_goto = 0
 	global.y_goto = 0
+} else {
+	y += global.player_correct_y
+	x += global.player_correct_x
+	
+	global.player_correct_y = 0
+	global.player_correct_x = 0
 }
 
 if (!instance_exists(MenuController)) instance_create_depth(0, 0, 0, MenuController)
