@@ -11,7 +11,7 @@ char_colors =
 	"Congrats": c_yellow,
 	"Renatus": c_yellow,
 	"Lyran": c_aqua,
-	"Healer": c_lime,
+	"Edea": c_lime,
 	"Campfire": c_orange
 }
 
@@ -30,12 +30,16 @@ welcome_dialog = [
 }
 ]
 
-dialog_two = [{name: "Healer", msg: "Imagine if the devs could remember my name..."}]
+dialog_two = [
+	{
+		name: "Edea",
+		msg: "The devs remembered my name!"
+	}
+]
 
 campfire_dialog = [
-{
-	name: "Campfire",
-	msg: "Health restored and game saved!"
-}
-
+	{
+		name: "Campfire",
+		msg: "Health restored and game saved!"
+	}
 ]
