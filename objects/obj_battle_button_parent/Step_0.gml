@@ -1,4 +1,4 @@
-if (!obj_battle_manager.ally_turn) exit;
+if (!instance_exists(obj_battle_manager) || !obj_battle_manager.ally_turn) exit;
 if (global.ally_busy) exit;
 if (button_selected)
 {

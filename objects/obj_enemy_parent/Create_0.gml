@@ -1,17 +1,4 @@
 
-// Setup Initial Stats
-enemy_attributes = {
-	hp_max: 1,
-	hp_current: 1,
-	strength: 5,
-	vitality: 5,
-	agility: 5,
-	dexterity: 5
-}
-// Setup HP Stats
-enemy_attributes.hp_max = 10 + (2 * enemy_attributes.vitality)
-enemy_attributes.hp_current = enemy_attributes.hp_max
-
 // Take Damage Animation variable setup 
 damage_shake_strength = 2
 damage_animation_start = false

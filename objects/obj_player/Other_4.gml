@@ -1,8 +1,4 @@
-if (variable_global_exists("music")) {
-	audio_resume_sound(global.music)	
-} else {
- global.music = audio_play_sound(snd_village_theme, 0, true)
-}
+PlayRoomMusic()
 window_set_size(1366, 768)
 surface_resize(application_surface, 1366, 768)
 
@@ -11,7 +7,8 @@ facing = 0
 
 instance_create_layer(x, y, "Instances", obj_safety_net)
 encounter_check = false
-encounter_chance = 1299
+encounter_chance = 799
+alarm[7] = 8
 alarm[2] = 400
 
 if (global.x_goto != 0) {
@@ -21,6 +18,16 @@ if (global.x_goto != 0) {
 	global.x_goto = 0
 	global.y_goto = 0
 } else {
+	if (global.gate_goto != -1) {
+		with (obj_room_switcher) {
+			if (gate_id == global.gate_goto) {
+				obj_player.x = x
+				obj_player.y = y
+				global.gate_goto = -1
+				break
+			}
+		}
+	}
 	y += global.player_correct_y
 	x += global.player_correct_x
 	

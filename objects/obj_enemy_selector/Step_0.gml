@@ -1,17 +1,17 @@
 x = global.target_enemy.x
-y = global.target_enemy.y
+y = global.target_enemy.y - global.target_enemy.sprite_height / 2
 
 global.ally_busy = true
 
-if (image_xscale < starting_xscale + 0.3 && grow == true)
+if (image_xscale < clamp((global.target_enemy.sprite_height / 24), 1, 3) * 1.25 && grow == true)
 {
 	image_xscale += 0.01
 	image_yscale += 0.01
-} else if (image_xscale > starting_xscale) {
+} else {
 	grow = false
 	image_xscale -= 0.01
 	image_yscale -= 0.01
-	if (image_xscale <= starting_xscale) grow = true;
+	if (image_xscale <= clamp((global.target_enemy.sprite_height / 24), 1, 3)) grow = true;
 }
 
 if (keyboard_check_pressed(ord("D")) || keyboard_check_pressed(ord("A")))
@@ -22,8 +22,8 @@ if (keyboard_check_pressed(ord("D")) || keyboard_check_pressed(ord("A")))
 
 if (keyboard_check_pressed(ord("W")) || keyboard_check_pressed(ord("S")))
 {
-	select_next_ver_enemy()
 	audio_play_sound(snd_battle_beep, 0, false)
+	select_next_ver_enemy()
 }
 
 if (keyboard_check_pressed(vk_escape) or keyboard_check_pressed(vk_tab)) 

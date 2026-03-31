@@ -17,7 +17,8 @@ if (paused) {
 			with (obj_button_parent) instance_destroy()
 			instance_destroy(obj_main_volume_display_1)
 			instance_destroy(obj_music_volume_display_1)
-				
+			
+			options_menu = false
             paused = false; // Resume 
 			
         } else if (menu_index == 1) {

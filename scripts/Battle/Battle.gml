@@ -199,8 +199,19 @@ function select_next_hor_enemy(){
 		
 		global.target_enemy = obj_enemy3
 		
+	} else if (instance_exists(obj_enemy1) && global.target_enemy != obj_enemy1) {
+		
+		global.target_enemy = obj_enemy1
+	} else if (instance_exists(obj_enemy2)  && global.target_enemy != obj_enemy2) {
+		
+		global.target_enemy = obj_enemy2
+	} else if (instance_exists(obj_enemy3)  && global.target_enemy != obj_enemy3) {
+		
+		global.target_enemy = obj_enemy3
+	} else if (instance_exists(obj_enemy4)  && global.target_enemy != obj_enemy4) {
+		
+		global.target_enemy = obj_enemy4
 	}
-	
 }
 
 function select_next_ver_enemy(){
@@ -224,6 +235,18 @@ function select_next_ver_enemy(){
 		
 		global.target_enemy = obj_enemy2
 		
+	} else if (instance_exists(obj_enemy1)  && global.target_enemy != obj_enemy1) {
+		
+		global.target_enemy = obj_enemy1
+	} else if (instance_exists(obj_enemy2)  && global.target_enemy != obj_enemy2) {
+		
+		global.target_enemy = obj_enemy2
+	} else if (instance_exists(obj_enemy3)  && global.target_enemy != obj_enemy3) {
+		
+		global.target_enemy = obj_enemy3
+	} else if (instance_exists(obj_enemy4)  && global.target_enemy != obj_enemy4) {
+		
+		global.target_enemy = obj_enemy4
 	}
 	
 }

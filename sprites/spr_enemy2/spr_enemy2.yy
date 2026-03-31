@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Enemy Sprites",
-    "path":"folders/Sprites/Enemy Sprites.yy",
+    "name":"Deprecated",
+    "path":"folders/Sprites/Enemy Sprites/Deprecated.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

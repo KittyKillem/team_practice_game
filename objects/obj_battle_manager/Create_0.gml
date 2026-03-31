@@ -1,3 +1,5 @@
+SummonEnemies(obj_battle_switcher.room_to_return)
+
 menu_items = false
 menu_special = false
 menu_special_yesno = false

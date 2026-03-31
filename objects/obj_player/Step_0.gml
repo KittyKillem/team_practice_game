@@ -47,7 +47,7 @@ move_and_collide(_hor, _ver , [tilemap_to_collide, obj_npc_parent], undefined, u
 if (_hor !=0 or _ver != 0)
 {
 	// Set animation direction based on first movement
-	if (still or keyboard_check_released(ord(_key))) {
+	if (still or keyboard_check_released(ord(_key)) or alarm[7] >= 0) {
 		if (_ver > 0) { 
 			sprite_index = spr_lyran_walk_down
 			_key = "S"
@@ -87,7 +87,7 @@ else
 
 var _total_movement = abs(_hor) + abs(_ver)
 var _random_encounter = false
-if (_total_movement && encounter_check && room != rm_test1)
+if (_total_movement && encounter_check && room != rm_village)
 {
 	_random_encounter = (irandom(round(encounter_chance * _total_movement)) <= 0)
 	encounter_chance -= 1
@@ -119,5 +119,10 @@ if keyboard_check(vk_space)
 	_inst.damage = strength
 	// have the image point in the direction of your most recent movement
 	_inst.image_angle = facing
-}
+}*/
 
+if (x <= 0) x = 1
+else if (x >= room_width) x = room_width - 1
+
+if (y <= 0) y = 1
+else if (y >= room_height) y = room_height - 1

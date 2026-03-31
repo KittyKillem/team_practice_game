@@ -5,6 +5,6 @@ global.buttons_struct = {attack: true, special: false, defend: false, item: fals
 global.button_current = "attack"
 global.button_next = ""
 
-alarm[1] = 1
+alarm[1] = 2
 
 audio_play_sound(snd_encounter_theme, 0, true)

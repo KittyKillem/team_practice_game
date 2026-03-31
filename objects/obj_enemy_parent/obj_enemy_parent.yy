@@ -29,6 +29,7 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"selected","filters":[],"listItems":[],"multiselect":false,"name":"selected","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"enemy_attributes","filters":[],"listItems":[],"multiselect":false,"name":"enemy_attributes","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"{}","varType":4,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
