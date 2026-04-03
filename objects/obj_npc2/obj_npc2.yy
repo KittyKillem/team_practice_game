@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
   "%Name":"obj_npc2",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_npc2",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_npc_parent","path":"objects/obj_npc_parent/obj_npc_parent.yy",},"propertyId":{"name":"dialog","path":"objects/obj_npc_parent/obj_npc_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-1",},
-  ],
+  "overriddenProperties":[],
   "parent":{
     "name":"NPC's",
     "path":"folders/Objects/NPC's.yy",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_npc2",
-    "path":"sprites/spr_npc2/spr_npc2.yy",
+    "name":"SPR_Healer_Right",
+    "path":"sprites/SPR_Healer_Right/SPR_Healer_Right.yy",
   },
   "spriteMaskId":null,
   "visible":true,

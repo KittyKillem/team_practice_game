@@ -2,5 +2,5 @@
 
 if (animate_button)
 {
-	room_goto(rm_test1)
+	load_game()
 }

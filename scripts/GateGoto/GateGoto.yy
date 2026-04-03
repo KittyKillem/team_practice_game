@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"GateGoto",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GateGoto",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

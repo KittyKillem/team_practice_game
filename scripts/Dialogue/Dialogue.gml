@@ -9,32 +9,83 @@ function create_dialog(_messages){
 char_colors = 
 {
 	"Congrats": c_yellow,
-	"Cross": c_yellow,
-	"Your_name_here": c_aqua,
-	"Dweebus Maximus": c_red
+	"Renatus": c_yellow,
+	"Lyran": c_aqua,
+	"Edea": c_lime,
+	"Campfire": c_orange,
+	"Message": c_yellow
 }
 
 welcome_dialog = [
 {
-	name: "Cross",
-	msg: "Andrew was here."
+	name: "Renatus",
+	msg: "Alright, Lyran. The dungeon is up ahead, we'll follow you inside."
 },
 {
-	name: "Your_name_here",
-	msg: "Mhm."
+	name: "Lyran",
+	msg: "Sounds good to me, boss."
 },
 {
-	name: "Cross",
-	msg: "My name's cross btw. This is test dialogue"
+	name: "Renatus",
+	msg: "By the way, you can hold TAB to make dialog go by faster."
 },
 {
-	name: "Your_name_here",
-	msg: "Okay..."
-},
-{
-	name: "Cross",
-	msg: "Can you please just play my shitty game already."
+	name: "Lyran",
+	msg: "Oh..."
 }
 ]
 
-dialog_two = [{name: "Dweebus Maximus", msg: "Hehehe. Fuck off, kid."}]
+dialog_two = [
+	{
+		name: "Edea",
+		msg: "The devs remembered my name!"
+	}
+]
+
+campfire_dialog = [
+	{
+		name: "Campfire",
+		msg: "Health restored and game saved!"
+	},
+]
+	
+wipe_dialog = [
+	{
+		name: "Message",
+		msg: "Game save wiped!"
+	},
+]
+wipe_failed_dialog = [
+	{
+		name: "Message",
+		msg: "No save file detected."
+	}
+]
+
+warm_campfire_dialog = [
+	{
+		name: "Campfire",
+		msg: "The warm campfire is a welcome sight.\nHealth restored and game saved!"
+	},
+]
+
+forest_sign_dialog = [
+	{
+		name: "Message",
+		msg: "Towards the scary woods!"
+	}
+]
+
+snowy_sign_dialog = [
+	{
+		name: "Message",
+		msg: "Towards the beautiful snowy lands..."
+	}
+]
+
+snowy_sign_dialog = [
+	{
+		name: "Message",
+		msg: "Towards the beautiful snowy lands..."
+	}
+]

@@ -1,0 +1,1 @@
+// Special_Prompt_Close()

@@ -8,8 +8,8 @@
   "name":"obj_attack",
   "overriddenProperties":[],
   "parent":{
-    "name":"Player",
-    "path":"folders/Objects/Player.yy",
+    "name":"RPG Starter Pack",
+    "path":"RPG Starter Pack.yyp",
   },
   "parentObjectId":null,
   "persistent":false,
