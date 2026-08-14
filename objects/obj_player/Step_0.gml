@@ -17,8 +17,10 @@ var _ver = keyboard_check(ord("S")) - keyboard_check(ord("W"))
 // restrict movement when moving diagonally
 if (_hor + _ver > 1 || _hor + _ver < -1)
 {
-	clamp(_hor,-0.5, 0.5); 
-	clamp(_ver,-0.5, 0.5); 
+	var _movementVectorMagnitude = sqrt((_hor * _hor) + (_ver * _ver));
+	var _newVectorComponent = 1/_movementVectorMagnitude;
+	clamp(_hor, 0 - _newVectorComponent, _newVectorComponent); 
+	clamp(_ver, 0 - _newVectorComponent, _newVectorComponent); // I'm adding these 0's because this code is untested and I don't know that GML allows -valueName
 }
 
 
