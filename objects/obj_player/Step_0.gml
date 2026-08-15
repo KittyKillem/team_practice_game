@@ -19,8 +19,8 @@ if (_hor + _ver > 1 || _hor + _ver < -1)
 {
 	var _movementVectorMagnitude = sqrt((_hor * _hor) + (_ver * _ver));
 	var _newVectorComponent = 1/_movementVectorMagnitude;
-	clamp(_hor, 0 - _newVectorComponent, _newVectorComponent); 
-	clamp(_ver, 0 - _newVectorComponent, _newVectorComponent); // I'm adding these 0's because this code is untested and I don't know that GML allows -valueName
+	clamp(_hor, -abs(_newVectorComponent), abs(_newVectorComponent)); 
+	clamp(_ver, -abs(_newVectorComponent), _newVectorComponent); // I'm adding these 0's because this code is untested and I don't know that GML allows -valueName
 }
 
 
